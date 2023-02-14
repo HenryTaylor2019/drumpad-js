@@ -1,0 +1,145 @@
+body {
+  text-align: center;
+  background-color: #342e37;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #dbedf3;
+  font-family: "Bebas Neue", cursive;
+}
+
+footer {
+  color: #dbedf3;
+  font-family: sans-serif;
+}
+
+.machine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto 25%;
+}
+
+.module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  width: 240px;
+}
+
+.switch:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404b69;
+  font-size: 5rem;
+  font-family: "Bebas Neue", cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #da0463;
+  border-radius: 15px;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.active {
+  background-color: red;
+}
+
+.title-shake {
+  animation: shake 0.22s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
